@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './Home/Home.component';
+import { NgModule } from '@angular/core';
 import { ComponentsModule } from '../components/components.module';
+import { HomeComponent } from './Home/Home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from '../angular-material/angular-material.module';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -15,10 +14,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule, 
-    ComponentsModule, 
-    MaterialModule, 
-    ReactiveFormsModule,
-    FormsModule
+    ComponentsModule,
+    MaterialModule
   ],
   exports: [
     HomeComponent,
