@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-grid-list cols="3" rowHeight="300px">
+        <mat-grid-tile *ngFor="let item of items">
+            <div class="tile-content">
+                <img src="https://cdn-icons-png.flaticon.com/512/26/26276.png"
+                    alt="{{ item.title }}">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+                <button mat-raised-button color="primary">Ver más</button>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
