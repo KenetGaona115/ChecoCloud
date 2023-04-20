@@ -6,7 +6,7 @@
                     alt="{{ item.title }}">
                 <h3>{{ item.title }}</h3>
                 <p>{{ item.description }}</p>
-                <button mat-raised-button color="primary">Ver más</button>
+                <button mat-raised-button color="primary" (click)="irADetalleCancion(item.id)">Ver más</button>
             </div>
         </mat-grid-tile>
     </mat-grid-list>

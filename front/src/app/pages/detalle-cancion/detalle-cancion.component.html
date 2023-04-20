@@ -1,0 +1,59 @@
+<div class="container">
+  <h1 class="title">{{ song.title }}</h1>
+  <div class="img-container">
+    <img
+      [src]="song.imageUrl?song.imageUrl:'https://i.discogs.com/YEbVgTdN4720SnujVooKP_HKQYL1rrvdujIIjClI2BE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM1OTA4/NDAtMTMzNjUwODA2/MC01MzQyLmpwZWc.jpeg'"
+      alt="{{ song.title }}">
+  </div>
+
+  <!-- Agrega la etiqueta de audio aquí -->
+  <audio controls>
+    <source [src]="song.audioUrl" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <div class="rating-container">
+    <mat-icon class="star-rating-default">star</mat-icon>
+    <span>{{ song.rating }}</span>
+  </div>
+
+  <div class="details-container">
+    <h2>Detalles de la canción:</h2>
+    <ul>
+      <li><strong>Artista:</strong> {{ song.artist }}</li>
+      <li><strong>Álbum:</strong> {{ song.album }}</li>
+    </ul>
+  </div>
+
+  <!-- Agregar el apartado de calificación -->
+  <div class="rate-container">
+    <h2 style="text-align: center">Califica esta canción</h2>
+    <!-- <mat-slider thumbLabel tickInterval="1" min="0" max="5" [(ngModel)]="userRating"></mat-slider> -->
+    <div class="star-rating-container">
+      <mat-icon class="star-rating" *ngFor="let star of stars" [ngClass]="{'filled': star <= userRating}"
+        (click)="rateSong(star)">star</mat-icon>
+    </div>
+    <!-- <button mat-raised-button color="primary" (input)="rateSong()">Enviar calificación</button> -->
+  </div>
+</div>
+
+<div class="comments-container">
+  <h2 style="text-align: center">Comentarios:</h2>
+  <div *ngFor="let comment of comments" class="comment">
+    <mat-icon>person</mat-icon>
+    <span class="author">{{ comment.user }}</span>
+    <p class="text">{{ comment.text }}</p>
+    <span class="date">{{ comment.date |date }}</span>
+  </div>
+</div>
+
+<div class="comment-form">
+  <h2>Añadir comentario:</h2>
+  <form (ngSubmit)="addComment()">
+    <mat-form-field>
+      <textarea matInput placeholder="Comentario" [(ngModel)]="newComment.text" name="text" required></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Enviar comentario</button>
+  </form>
+</div>
+

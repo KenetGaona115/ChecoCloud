@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 interface Cancion {
@@ -13,7 +14,7 @@ interface Cancion {
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+  isEditProfile: boolean = false
   canciones: Cancion[] = [
     {
       nombre: 'Canción 1',
@@ -67,9 +68,20 @@ export class ProfileComponent implements OnInit {
     // Código para reproducir la canción
   }
 
-  constructor() {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  addSong() {
+    this.router.navigate(['add'])
+  }
+  editProfile() {
+    this.isEditProfile = true;
+  }
+
+  cancelEditProfile() {
+    this.isEditProfile = false;
   }
 
 }

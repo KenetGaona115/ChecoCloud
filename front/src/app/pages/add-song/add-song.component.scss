@@ -1,0 +1,9 @@
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+
+  .form-grid__item {
+    grid-column: span 1;
+  }

@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  <div class="form-grid">
+    <mat-form-field class="form-grid__item">
+      <input matInput placeholder="Título de la canción" formControlname="name" required>
+    </mat-form-field>
+    <mat-form-field class="form-grid__item">
+      <input matInput placeholder="Artista" name="artist" formControlname="autor" required>
+    </mat-form-field>
+    <mat-form-field class="form-grid__item">
+      <mat-label>Género</mat-label>
+      <mat-select placeholder="Selecciona el género" name="genre" formControlName="genero" required>
+        <mat-option value="rock">Rock</mat-option>
+        <mat-option value="pop">Pop</mat-option>
+        <mat-option value="hip-hop">Hip-hop</mat-option>
+        <mat-option value="electronic">Electrónica</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="form-grid__item">
+      <mat-label>Archivo de audio</mat-label>
+      <input type="file" name="file" (change)="onFileSelected($event)" required>
+    </div>
+    <button mat-raised-button class="form-grid__item" type="primary" [disabled]="!form.valid || !file">Subir canción</button>
+  </div>
+</form>

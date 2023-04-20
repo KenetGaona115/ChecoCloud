@@ -20,5 +20,8 @@ export class NavbarComponent implements OnInit {
   goToProfile() {
     this.router.navigate(['/profile']);
   }
+  goHome() {
+    this.router.navigate(['/home']);
+  }
 
 }

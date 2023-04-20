@@ -13,8 +13,10 @@
             <span class="mat-card-subtitle">Descripción del usuario</span>
         </mat-card-header>
         <mat-card-content>
-            <button mat-raised-button color="primary">Subir canción</button>
-            <button mat-raised-button color="accent">Editar perfil</button>
+            <button mat-raised-button color="primary" (click)="addSong()">Subir canción</button>
+            <button mat-raised-button color="accent" *ngIf="!isEditProfile" (click)="editProfile()">Editar perfil</button>
+            <button mat-raised-button color="accent" *ngIf="isEditProfile" (click)="cancelEditProfile()">Cancelar</button>
+
         </mat-card-content>
         <mat-card-footer>
             <span>{{ canciones.length }} canciones</span>
@@ -44,6 +46,6 @@
 
 <!-- editar prerfil -->
 
-<!-- <div>
+<div *ngIf="isEditProfile">
     <app-editInfo></app-editInfo>
-</div> -->
+</div>

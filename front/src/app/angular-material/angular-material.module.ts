@@ -8,8 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule  } from '@angular/material/slider';
 
 @NgModule({
   imports: [
@@ -24,6 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     BrowserAnimationsModule,
     MatListModule,
+    MatSnackBarModule ,
+    MatSliderModule
   ],
   exports: [
     MatToolbarModule,
@@ -37,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     BrowserAnimationsModule,
     MatListModule,
-    
+    MatSnackBarModule,
+    MatSliderModule
   ]
 })
 export class MaterialModule { }

@@ -3,10 +3,8 @@
       <mat-card-title>Foto de perfil</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-      <mat-form-field>
           <mat-label>Seleccionar imagen</mat-label>
-          <input type="file" [formControl]="fileControl" (change)="onFileSelected($event)">
-      </mat-form-field>
+          <input type="file" (change)="onFileSelected($event)">
       <div *ngIf="imageUrl">
           <img [src]="imageUrl" alt="Vista previa de la imagen seleccionada">
       </div>
@@ -34,7 +32,6 @@
           <div class="actions">
               <button mat-raised-button type="submit" color="primary"
                   [disabled]="profileForm.invalid">Guardar</button>
-              <button mat-raised-button type="button" color="warn" (click)="onCancel()">Cancelar</button>
           </div>
       </form>
   </mat-card-content>

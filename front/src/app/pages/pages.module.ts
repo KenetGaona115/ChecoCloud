@@ -4,22 +4,31 @@ import { ComponentsModule } from '../components/components.module';
 import { HomeComponent } from './Home/Home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from '../angular-material/angular-material.module';
+import { DetalleCancionComponent } from './detalle-cancion/detalle-cancion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddSongComponent } from './add-song/add-song.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    DetalleCancionComponent,
+    AddSongComponent
   ],
   imports: [
     CommonModule, 
     ComponentsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    DetalleCancionComponent,
+    AddSongComponent
   ]
 })
 export class PagesModule { }

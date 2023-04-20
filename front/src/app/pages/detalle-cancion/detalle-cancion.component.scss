@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.img-container {
+  width: 15%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mat-icon {
+  margin-right: 5px;
+}
+
+.star-rating {
+  color: #fdd835;
+}
+
+// .comments-container {
+//   width: 50%;
+// }
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.comment .mat-icon {
+  margin-right: 10px;
+}
+
+.comment .author {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.comment .date {
+  font-size: 14px;
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.comment .text {
+  font-size: 14px;
+}
+
+audio {
+  width: 80vw;
+  margin-bottom: 20px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #333;
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.details-container {
+  padding-bottom: 3%;
+}
+
+.rate-container {
+  padding-bottom: 3%;
+}
+
+.star-rating-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.star-rating {
+  font-size: 32px;
+  color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.star-rating.filled {
+  color: yellow;
+}
+
+.star-rating-default {
+  color: yellow;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.comment-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-form mat-form-field {
+  margin-bottom: 10px;
+}
+
+.comment-form button {
+  align-self: flex-end;
+}
