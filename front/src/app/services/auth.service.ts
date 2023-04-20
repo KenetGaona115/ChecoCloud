@@ -8,15 +8,15 @@ export class AuthService {
   constructor() { }
 
   isLoggedIn(): boolean {
-    return false;
+    return localStorage.getItem('isLogged') == 'true' 
   }
 
-  login():boolean{
+  login(user: any): boolean {
     //TODO:hacer login
     return true;//false si existe error
   }
 
-  logout(){
+  logout() {
     //Todo:hacer logout
   }
 

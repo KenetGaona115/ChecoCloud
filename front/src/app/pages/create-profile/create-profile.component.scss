@@ -1,0 +1,25 @@
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 16px;
+}
+
+@media (max-width: 599px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  

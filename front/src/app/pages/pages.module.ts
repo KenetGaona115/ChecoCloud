@@ -7,6 +7,8 @@ import { MaterialModule } from '../angular-material/angular-material.module';
 import { DetalleCancionComponent } from './detalle-cancion/detalle-cancion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddSongComponent } from './add-song/add-song.component';
+import { CreateProfileComponent } from './create-profile/create-profile.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -15,7 +17,9 @@ import { AddSongComponent } from './add-song/add-song.component';
     HomeComponent,
     ProfileComponent,
     DetalleCancionComponent,
-    AddSongComponent
+    AddSongComponent,
+    CreateProfileComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule, 
@@ -28,7 +32,9 @@ import { AddSongComponent } from './add-song/add-song.component';
     HomeComponent,
     ProfileComponent,
     DetalleCancionComponent,
-    AddSongComponent
+    AddSongComponent,
+    CreateProfileComponent,
+    LoginComponent,
   ]
 })
 export class PagesModule { }

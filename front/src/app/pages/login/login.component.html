@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Iniciar sesión</mat-card-title>
+    </mat-card-header>
+  
+    <form [formGroup]="form">
+      <mat-form-field>
+        <input matInput formControlName="email" placeholder="Correo electronico">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput type="password" formControlName="password" placeholder="Contraseña">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary"(click)="login()">Iniciar sesión</button>
+    </form>
+  
+    <div class="crear-cuenta">
+      ¿No tienes una cuenta?
+      <button mat-button color="accent" (click)="goToCreateAccount()">Crear cuenta</button>
+    </div>
+  </mat-card>
+  
+  
