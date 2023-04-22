@@ -1,0 +1,52 @@
+{
+    "songs": [
+        {    
+            "id": 1,
+            "idUser": 1,
+            "nombreCancion": "Ramstain",
+            "autor": "zeus34",
+            "comentarios": "Wow, llebo mucho tiempo que no escucho una canción como esa. Está chingon!",
+            "raiting": 5
+        },
+        {
+            "id": 2,
+            "idUser": 4,
+            "nombreCancion": "Yen",
+            "autor": "ramiroking3",
+            "comentarios": "Al chile está para cotarse las venas, pero está perrisisisisisimo",
+            "raiting": 5
+        },
+        {
+            "id": 5,
+            "idUser": 2,
+            "nombreCancion": "MalAventurados",
+            "autor": "josepo32",
+            "comentarios": "Justamente que me acaba de dejar mi morrita, esa canción me llegó hasta el alma y darme unos madrasos. DIEZ DE DIEZ!!!!",
+            "raiting": 5
+        },
+        {
+            "id": 1,
+            "idUser": 1,
+            "nombreCancion": "Ramstain",
+            "autor": "zeus34",
+            "comentarios": "alv!!!! Neta esta canción existe? Quiero que hagas más como está!",
+            "raiting": 5
+        },
+        {
+            "id": 2,
+            "idUser": 4,
+            "nombreCancion": "Yen",
+            "autor": "ramiroking3",
+            "comentarios": "Le hace falta más tristesa a la cancion, pero está perro. Igual, me quiero cortar la vena",
+            "raiting": 4
+        },
+        {
+            "id": 2,
+            "idUser": 4,
+            "nombreCancion": "Yen",
+            "autor": "ramiroking3",
+            "comentarios": "Esperaba mas, pero aún así hay que hacer suicidio colectivo",
+            "raiting": 4
+        }
+    ]
+}
