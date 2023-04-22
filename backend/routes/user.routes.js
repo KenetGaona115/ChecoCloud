@@ -14,5 +14,9 @@ router.get("/getallusers", async (req, res, next)=>{
     res.send(usuario)
  })
 
+ router.get("/Login", async(req, res, next)=>{
+
+ })
+
 
 module.exports = router;
