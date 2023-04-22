@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  URL:'http://localhost:3000/main',
+  URL:'https://p2zpnsd84k.execute-api.us-east-1.amazonaws.com',
   production: false
 };
 

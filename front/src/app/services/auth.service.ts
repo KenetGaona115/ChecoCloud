@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { User } from '../interfaces/User';
@@ -14,14 +14,9 @@ export class AuthService {
     return localStorage.getItem('isLogged') == 'true'
   }
 
-  login(user: any): boolean {
-
-    this.http.get<User>(environment.URL + '/Login').subscribe(
-      {
-        next: (response: any) => { console.log(response) }
-      }
-    );
-    return true;//false si existe error
+  login(user: any) {
+    let params = new HttpParams().set("correo", user.email).set("password", user.password)
+    return this.http.get<User | any>(environment.URL + '/items', { params })
   }
 
   logout() {
