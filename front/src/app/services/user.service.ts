@@ -12,4 +12,9 @@ export class UserService {
     return this.http.post('/createUser', user)
     //TODO hacer llamada para crear usuario
   }
+
+  getUser() {
+
+  }
+
 }
