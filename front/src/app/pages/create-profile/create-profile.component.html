@@ -1,30 +1,28 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Crear usuario</mat-card-title>
+      <mat-card-title>Crear usuario</mat-card-title>
     </mat-card-header>
-
-    <form [formGroup]="usuarioForm" class="form-container">
-        <mat-form-field>
-            <input matInput placeholder="Nombre de usuario" formControlName="username" name="name" required>
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Correo electrónico" formControlName="email" name="email" required>
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput type="password" placeholder="Contraseña" formControlName="password" name="password"
-                required>
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput type="password" [formControl]="confirm" placeholder="Confirmar contraseña"
-                name="confirmPassword" required>
-        </mat-form-field>
-
-        <div class="center">
-            <button mat-raised-button color="primary" type="submit" [disabled]="usuarioForm.invalid">Crear
-                usuario</button>
-        </div>
+  
+    <form [formGroup]="usuarioForm" class="form-container" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Nombre de usuario" formControlName="username" name="name" required>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput placeholder="Correo electrónico" formControlName="email" name="email" required>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput type="password" placeholder="Contraseña" formControlName="password" name="password" required>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput type="password" [formControl]="confirm" placeholder="Confirmar contraseña" name="confirmPassword" required>
+      </mat-form-field>
+  
+      <div class="center">
+        <button mat-raised-button color="primary" type="submit" [disabled]="usuarioForm.invalid">Crear usuario</button>
+      </div>
     </form>
-</mat-card>
+  </mat-card>
+  
